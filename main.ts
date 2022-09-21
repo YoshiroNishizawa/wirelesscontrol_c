@@ -1,20 +1,22 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (flag == 0 && receivedNumber == 1) {
         flag = 1
-        servos.P0.setAngle(45)
-        servos.P1.setAngle(135)
+        pins.servoWritePin(AnalogPin.P0, 45)
+        pins.servoWritePin(AnalogPin.P1, 135)
     }
     if (flag == 1 && receivedNumber == 1) {
-        servos.P1.setAngle(135)
+        pins.servoWritePin(AnalogPin.P0, 90)
+        pins.servoWritePin(AnalogPin.P1, 135)
     } else if (flag == 1 && receivedNumber == 2) {
-        servos.P0.setAngle(45)
+        pins.servoWritePin(AnalogPin.P0, 45)
+        pins.servoWritePin(AnalogPin.P1, 90)
     } else if (flag == 1 && receivedNumber == 0) {
         flag = 0
-        servos.P0.setAngle(90)
-        servos.P1.setAngle(90)
+        pins.servoWritePin(AnalogPin.P0, 90)
+        pins.servoWritePin(AnalogPin.P1, 90)
     } else if (flag == 1) {
-        servos.P0.setAngle(45)
-        servos.P1.setAngle(135)
+        pins.servoWritePin(AnalogPin.P0, 45)
+        pins.servoWritePin(AnalogPin.P1, 135)
     }
 })
 let flag = 0
