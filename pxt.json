@@ -1,5 +1,5 @@
 {
-    "name": "WirelessControl(Full)_c",
+    "name": "WirelessControl_c",
     "description": "",
     "dependencies": {
         "core": "*",
